@@ -2,10 +2,22 @@
 const fs = require('fs');
 const path = require('path');
 
-// lecture contenu d'un fichier
-const fichier = fs.readFileSync('./README.md', {encoding:'utf-8'}).toString()
-console.log(fichier)
+var readdir = fs.readdirSync(path);
 
+
+// lecture contenu d'un fichier
+const fichier = fs.readFileSync('__dirname', {encoding:'utf-8'}).toString()
+console.log(fichier);
+
+const fichier2 = fs.readFileSync('./lisezmoi.md', {encoding:'utf-8'}).toString()
+console.log(fichier2);
+
+const fichier3 = fs.readFileSync('lisez.md', {encoding:'utf-8'}).toString()
+console.log(fichier3);
+
+
+
+/* 
 // écriture d'une chaine dans un fichier
 fs.writeFileSync('./lisezmoi.md', 'readme!');
 fs.appendFileSync('./lisezmoi.md', ' lisez moi!');
@@ -23,4 +35,4 @@ if (fs.existsSync(dir)) {
 // chemin vers un fichier ou dossier
 console.log( path.join(__dirname,'components','app/','fichier.js'));
 console.log( __dirname );
-console.log( __filename );
+console.log( __filename ); */
