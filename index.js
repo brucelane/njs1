@@ -2,9 +2,15 @@
 const fs = require('fs');
 const path = require('path');
 
+
+// faire une boucle sur tous les fichiers de ce dossier
+// pour chaque fichier en afficher le contenu
+
+fs.readdi
 // lecture contenu d'un fichier
-const fichier = fs.readFileSync('./README.md', {encoding:'utf-8'}).toString()
-console.log(fichier)
+const fichier = fs.readFileSync(filename, {encoding:'utf-8'}).toString();
+console.log(fichier);
+
 
 // écriture d'une chaine dans un fichier
 fs.writeFileSync('./lisezmoi.md', 'readme!');
